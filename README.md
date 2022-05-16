@@ -216,7 +216,30 @@ ___
 Hemos hecho el segundo commit mediante Git y sus comandos.
 
 ___
--
+- Pruebas de Código.
 ___
+Debido a que el código lo teniamos creado de otro instituto, no tuvimos ningún problema con el código, éste siempre nos ha funcionado y todas las pruebas realizadas han dado resultados perfectos.
+
+Es verdad que puede que nuestra calculadora pueda dar números enteros menos cuando realizamos las divisiones:
+
+![image](https://user-images.githubusercontent.com/98842240/168569358-51a916ef-0907-4821-9c6b-628f5a4f457f.png)
+
+![image](https://user-images.githubusercontent.com/98842240/168569421-562d0ac6-6e08-47f8-9870-47446396309e.png)
+
+![image](https://user-images.githubusercontent.com/98842240/168569477-96587f20-06ff-428a-8bae-29291ddebcb0.png)
+
+![image](https://user-images.githubusercontent.com/98842240/168569522-e8acbdb6-ee5f-41a0-89eb-066dfe24e1e1.png)
+
+En la siguiente imagen podemos ver los problemas que da el código este quiere decir que de los items utilizados para crear la calculadora dan error 100 de estos.
+(no se porque puede dar esto si funciona correctamente todo).
 
 ![image](https://user-images.githubusercontent.com/98842240/168567013-579e79a2-3437-417c-9396-40712df27529.png)
+
+___
+- Utilidades usadas en el proyecto.
+___
+Hemos usado el uso de Problemas, JavaDoc, las Declaraciones, la Consola y Git for Windows.
+
+![image](https://user-images.githubusercontent.com/98842240/168569844-b8b72efb-a61c-4895-88c8-f8930216a881.png)
+
+___
