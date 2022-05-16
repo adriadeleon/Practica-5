@@ -210,3 +210,13 @@ Estos, por supuesto, no necesitan que se introduzca por parámetro el resultado 
 assertTrue(resultado); // correcto
 assertTrue(true, resultado); // innecesario.
 ```
+___
+- Segundo Commit.
+___
+Hemos hecho el segundo commit mediante Git y sus comandos.
+
+___
+-
+___
+
+![image](https://user-images.githubusercontent.com/98842240/168567013-579e79a2-3437-417c-9396-40712df27529.png)
