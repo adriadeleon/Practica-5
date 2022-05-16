@@ -148,3 +148,65 @@ panel.add(btnDivision);
 ___
 - Primer Commit de la Calculadora:
 ___
+
+Hemos realizado el primer Commit de las clases mediante los comandos de Git.
+
+___
+- Pruebas Junit.
+___
+
+Vamos a hacer un par de pruebas, una clase Suma.java y otra clase Resta.java. Ambas tienen dos métodos, la primera getSuma() e incrementa(), la segunda getDiferencia() y decrementa(). En los enlaces puedes ver el código completo de estas clases.
+
+Vamos a usar JUnit para hacer los test de estas clases y de sus métodos. Las versiones 3.8.1 y 4.5 de JUnit sirven para lo mismo y hacen lo mismo, pero de distinta manera, así que empezaremos con JUnit 3.8.1 y luego contaremos las diferencias con la 4.5.
+
+- En el caso de JUnit 3.8.1, debemos hacer que estas clases de prueba hereden de la clase TestCase de JUnit. Para JUnit un TestCase es una clase de test. Tenemos entonces, dos clases TestSuma y TestResta, que van a heredar ambas de TestCase
+
+```
+
+import junit.framework.TestCase
+...
+public class TestSuma extends TestCase {
+   ...
+}
+```
+
+Ahora tenemos que hacer los métodos de test. Cada método probará alguna cosa de la clase. JUnit 3.8.1 requiere que estos métodos empiecen por test. En el caso de TestSuma, vamos a hacer dos métodos de test, de forma que cada uno pruebe uno de los métodos de la clase Suma.
+
+Por ejemplo, para probar el método getSuma() de la clase Suma, vamos a hacer un método de prueba testGetSuma(). Este método sólo tiene que instanciar la clase Suma, llamar al método getSuma() con algunos parámetros y comprobar que el resultado es el esperado.
+
+```
+import junit.framework.TestCase
+...
+public class TestSuma extends TestCase {
+   Suma suma = new Suma();
+   double resultado = suma.getSuma(1.0, 1.0);
+   // Aqui debemos comprobar el resultado
+}
+```
+
+El ejemplo es muy tonto, porque vamos a sumar 1 más 1, que ya sabemos que a veces devuelve 2. ¿Cómo comprobamos ahora que el resultado es el esperado?. Al heredar de TestCase, tenemos disponibles de esta clase padre un montón de métodos assert***. Esto métodos son los que nos permiten comprobar que el resultado obtenido es igual al esperado. 
+
+Uno de los métodos más usados es assertEquals(), que en general admite dos parámetros: El primero es el valor esperado y el segundo el valor que hemos obtenido. Así, por encima, la comprobación del resultado podría ser tan simple como esto:
+
+```
+import junit.framework.TestCase
+public String sumar (String a, String b) {
+String respuesta = "";
+respuesta = (Double.parseDouble(a)+ Double.parseDouble(b))+"";
+return respuesta;
+
+}
+public class TestSuma extends TestCase {
+   Suma suma = new Suma();
+   double resultado = suma.getSuma(1.0, 1.0);
+   assertEquals(2.0, resultado);
+}
+```
+
+Finalmente, indicar que hay muchos más métodos assert*** para otras cosas, como assertNotNull() que indica que el resultado esperado no debe ser null, assertTrue(), que indica que el resultado esperado debe ser true, etc. 
+Estos, por supuesto, no necesitan que se introduzca por parámetro el resultado esperado, es decir, assertTrue() no necesita que le pasemos un parámetro con true.
+
+```
+assertTrue(resultado); // correcto
+assertTrue(true, resultado); // innecesario.
+```
